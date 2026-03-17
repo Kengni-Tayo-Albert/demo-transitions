@@ -1,0 +1,156 @@
+/****GENERAL*****/
+
+
+:root {
+    --bg: #0f0f14;
+    --card: #1a1a24;
+    --border: #2e2e42;
+    --accent: #f97316;
+    --demo-bg: #0d0d18;
+    --box-bg: #2dd4bf;
+    --label-color: #6b6b8a;
+
+
+}
+
+* {
+    margin: 0;
+    background-color: var(--bg);
+}
+
+.card {
+    width: 400px;
+    background-color: var(--card);
+    border: 1px solid --border;
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.card-title {
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: var(--accent);
+    letter-spacing: 0.08rem;
+    /*espacement des lettres */
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.demo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: var(--demo-bg);
+    border-radius: 10px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    gap: 20px;
+}
+
+.box {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    background-color: var(--box-bg);
+    cursor: pointer;
+}
+
+.label {
+    font-family: monospace;
+    font-size: 0.7 rem;
+    color: var(--label-color);
+}
+
+
+/****ANIMATIONS*****/
+
+.animation-fade {
+    background-image: url(../img/gojo.png);
+    animation-name: fadeInOut;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    /* animation-direction: alternate; */
+}
+
+@keyframes fadeInOut {
+    from {
+        opacity: 0;
+        background-color: var(--accent);
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+.animation-slide {
+    background-image: url(../img/kakashi.png);
+    animation-name: slide;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    /* animation-direction: alternate; */
+}
+
+
+@keyframes slide {
+    from {
+        opacity: 1;
+        transform: translate(-40px);
+    }
+
+    to {
+        opacity: 0;
+
+        transform: translate(0px);
+
+    }
+}
+
+.animation-spin {
+    background-image: url(../img/kiluala.png);
+    animation-name: spin;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+
+    }
+}
+
+.animation-bounce {
+    background-image: url(../img/yaguchi.png);
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    /* animation-timing-function: linear; */
+    animation-direction: alternate;
+}
+
+
+
+@keyframes bounce {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2);
+
+    }
+}
